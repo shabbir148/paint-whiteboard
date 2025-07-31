@@ -1,0 +1,100 @@
+.brush-selector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  .brush-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  .brush-selector-label {
+    margin-bottom: 10px;
+  }
+  .button-group {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  .button-group button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .button-group button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+
+
+
+
+
+  /* Color Picker styleing */
+
+  .color-picker-container {
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .color-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .color-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+  .color-button:hover {
+    transform: scale(1.1);
+  }
+  .color-button.active {
+    border: 2px solid #000;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+  .selected-color {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .selected-color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+  
+
+/* Toolbar */
+.toobar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+  }
+  .action-buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: center;
+  }
