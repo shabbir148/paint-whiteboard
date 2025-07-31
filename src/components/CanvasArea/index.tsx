@@ -91,7 +91,12 @@ export default function CanvasArea({
   return (
     <div
       className="canvas-area"
-      style={{ display: "felx", width: "100%", height: "100vh" }}
+      style={{
+        display: "flex",
+        width: "100%",
+        height: "100vh",
+        flexDirection: "column",
+      }}
     >
       <h1>Canvas Area</h1>
       <p>Selected Color: {selectedColor}</p>
