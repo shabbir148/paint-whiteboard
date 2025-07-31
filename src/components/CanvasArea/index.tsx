@@ -83,7 +83,7 @@ export default function CanvasArea({
       cxt.clearRect(0, 0, canvas.width, canvas.height);
       cxt.fillStyle = "white";
       cxt.fillRect(0, 0, canvas.width, canvas.height);
-      cxt.strokeRect(x, y, lastPosition.x - x,  lastPosition.y - y);
+      cxt.strokeRect(x, y, lastPosition.x - x, lastPosition.y - y);
     } else {
       cxt.lineTo(x, y);
       cxt.stroke();
@@ -96,7 +96,13 @@ export default function CanvasArea({
   };
 
   return (
-    <div className="canvas-container">
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+      }}
+    >
       <h1>Canvas Area</h1>
       <div className="canvas-controls">
         <p>Selected Color: {selectedColor}</p>
@@ -106,7 +112,6 @@ export default function CanvasArea({
       <div
         className="canvas"
         style={{
-          backgroundColor: selectedColor,
           width: "100%",
           height: "100%",
         }}
@@ -118,8 +123,6 @@ export default function CanvasArea({
             width: "100%",
             height: "100%",
           }}
-          width={800} // Set the canvas width
-          height={600} // Set the canvas height
           ref={canvasRef}
           onMouseDown={startDrawing}
           onMouseMove={draw}
