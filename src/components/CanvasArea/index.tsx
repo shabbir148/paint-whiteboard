@@ -104,6 +104,7 @@ export default function CanvasArea({
       <p>Selected Brush: {selectedBrush}</p>
       {/* Here you would implement the canvas drawing logic */}
       <canvas
+        className="drawing-canvas"
         ref={canvasRef}
         onMouseDown={startDrawing}
         onMouseMove={draw}

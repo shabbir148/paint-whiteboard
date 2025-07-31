@@ -8,9 +8,31 @@ function App() {
   const [selectedBrushSize, setSelectedBrushSize] = useState(5);
   const [selectedBrush, setSelectedBrush] = useState("pencil");
 
-  const handleSave = () => {};
+  const handleSave = (): void => {
+    const canvas = document.querySelector(
+      ".drawing-canvas"
+    ) as HTMLCanvasElement;
+    if (canvas) {
+      const Link = document.createElement("a");
+      Link.download = "drawing.png";
+      Link.href = canvas.toDataURL("image/png", 1.0);
+      Link.click();
+    }
+  };
   const handleUndo = () => {};
-  const handleClear = () => {};
+  const handleClear = (): void => {
+    const canvas = document.querySelector(
+      ".drawing-canvas"
+    ) as HTMLCanvasElement;
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+  };
 
   return (
     <div className="App">

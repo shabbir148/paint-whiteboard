@@ -17,13 +17,13 @@ export default function Toolbar({
     <div className="toolbar">
       <h1>Toolbar </h1>
       <div className="action-buttons">
-        <button onClick={() => alert("Save action")}>
+        <button onClick={() => handleSave()}>
           <SaveAll />
         </button>
         <button onClick={() => alert("Undo action")}>
           <Undo />
         </button>
-        <button onClick={() => alert("Clear action")}>
+        <button onClick={() => handleClear()}>
           <Delete />
         </button>
       </div>
