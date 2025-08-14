@@ -2,7 +2,8 @@
 
 A modern, interactive paint application built with React and TypeScript. Create digital artwork with intuitive drawing tools, customizable brushes, and a clean user interface.
 
-![Paint Studio Screenshot](https://via.placeholder.com/800x400/f0f0f0/333333?text=Paint+Studio+Interface)
+Live Demo: [Live](https://paint-whiteboard.vercel.app/)
+
 
 ## ✨ Features
 
